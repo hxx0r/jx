@@ -4,7 +4,8 @@
 
 создание приложения на котлин для проверки наличия почты/пароля в слитых бд
 
-1. создание проекта и настройка зависомостей в android studio
+1. создание проекта (фтвкщшв 10+) и настройка зависомостей в android studio
+   build.gradle.kts
    ```gradle
    dependencies {
     implementation(libs.androidx.core.ktx)
@@ -16,15 +17,16 @@
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-
+    //retrofit для сетевых запросов
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
     implementation("com.squareup.moshi:moshi-kotlin:1.14.0")
-// Coroutines
+    
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-// Lifecycle компоненты
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
-// Дополнительно
     implementation("com.google.android.material:material:1.7.0")
-}
+    }
+2. Добавление разрешения для доступа в интернет
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
